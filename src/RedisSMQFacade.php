@@ -8,6 +8,7 @@
  */
 namespace PhpRSMQ;
 
+use Redis;
 use InvalidArgumentException;
 use PhpRSMQ\Connections\RedisProxy;
 use PhpRSMQ\Connections\Configs\RedisConfig;
@@ -38,14 +39,12 @@ class RedisSMQFacade
     public function __construct($source = null, int $port = null)
     {
         if(is_null($source) || is_string($source)){
-            $redisConfig = new RedisConfig();
-            if(!is_null($source)){
-                $redisConfig->setHost($source);
-            }
+            $args = array(true);
+            $args[] = $source?? '127.0.0.1';
             if(!is_null($port)){
-                $redisConfig->setPort($port);
+                $args[] = $port;
             }
-            $source = $redisConfig;
+            $source = new RedisConfig(...$args);
         }elseif(!($source instanceof Redis)){
             throw new InvalidArgumentException('Wrong type of source argument!');
         }

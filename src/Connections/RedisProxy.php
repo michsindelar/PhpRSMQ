@@ -12,6 +12,7 @@ use Redis;
 use RedisException;
 use InvalidArgumentException;
 use PhpRSMQ\Connections\Configs\ConnectionConfigInterface;
+use PhpRSMQ\Connections\Configs\RedisConfig;
 use PhpRSMQ\Connections\Configs\SimpleConnectionConfig;
 use PhpRSMQ\Connections\Exceptions\ConnectionException;
 
