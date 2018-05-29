@@ -1,0 +1,25 @@
+{
+    "name": "michsindelar/phprsmq",
+    "description": "PHP implementation of the Redis Simple Message Queue.",
+    "license": "MIT",
+    "scripts": {
+        "test": "phpunit"
+    },
+    "authors": [
+        {
+            "name": "Michal Sindelar",
+            "email": "mich.sindelar@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4" : {
+            "PhpRSMQ\\" : "src/"
+        }
+    }
+}
