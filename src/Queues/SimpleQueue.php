@@ -53,7 +53,7 @@ class SimpleQueue implements QueueInterface
     /**
      * Finds the queue in Redis by name from $config and update its attribues (if it is necessary) or create new one. Also sets the config.
      *
-     * @param  QueueException  $config  If there is a conneciton problem or problem with creating new queue.
+     * @param  QueueException  $config  If there is a connection problem or problem with creating new queue.
      */
     protected function syncQueue(QueueConfigInterface $config)
     {
