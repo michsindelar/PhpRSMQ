@@ -34,7 +34,7 @@ interface ConnectionInterface
     /**
      * Executes commands in transaction.
      *
-     * @return array|null           Redis result or null if there are not commnads in trasaction.
+     * @return array|null           Redis result or null if there are not commnads in transaction.
      * @throws ConnectionException
      */
     public function exec();
@@ -62,7 +62,7 @@ interface ConnectionInterface
      *
      * @param  string                         $key         Redis hash key.
      * @param  array                          $hashKeys    Keys of hash.
-     * @return bool|array|ConnectionInterface              False on failute, redis result hash or self if the function is called in a transaction.
+     * @return bool|array|ConnectionInterface              False on failure, redis result hash or self if the function is called in a transaction.
      * @throws ConnectionException
      */
     public function hMGet(string $key, array $hashKeys);
@@ -115,7 +115,7 @@ interface ConnectionInterface
      * @param  string                   $key      Key of hash.
      * @param  string                   $hashKey  Key in hash.
      * @param  string                   $value
-     * @return bool|ConnectionInterface           True if field was set, false if filed exists or self if the function is called in a transaction.
+     * @return bool|ConnectionInterface           True if field was set, false if field exists or self if the function is called in a transaction.
      * @throws ConnectionException
      */
     public function hSetNx(string $key, string $hashKey, string $value);

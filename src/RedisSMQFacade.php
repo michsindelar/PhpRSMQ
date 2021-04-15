@@ -18,7 +18,7 @@ use PhpRSMQ\Messages\TextMessage;
 use PhpRSMQ\Messages\JsonMessage;
 
 /**
- * Redis SMQ Fqacade
+ * Redis SMQ Facade
  *
  * This class provides easy to use api for Redis Simple Message Queue manipulation.
  */
@@ -34,7 +34,7 @@ class RedisSMQFacade
      * @param                           $source   Host name of redis server or Redis instance.
      * @param  int|null                 $port     Port of redis server.
      * @throws ConnectionException                @see RedisProxy::__construct()
-     * @throws InvalidArgumentException           When a $source has worng format.
+     * @throws InvalidArgumentException           When a $source has wrong format.
      */
     public function __construct($source = null, int $port = null)
     {

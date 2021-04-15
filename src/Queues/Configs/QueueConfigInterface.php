@@ -52,7 +52,7 @@ interface QueueConfigInterface
      *
      * The maximum message size in bytes. Allowed values: 1024-65536 and -1 (for unlimited size)
      *
-     * @return int     MAximal length
+     * @return int     Maximal length
      */
     public function getMaxSize() :int;
 }
