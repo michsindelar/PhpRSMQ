@@ -31,7 +31,7 @@ class RedisSMQUtils
         $possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
         for($i=0; $i < $len; $i++){
-            $text .= $possible{(int) floor(rand(0, strlen($possible) - 1))};
+            $text .= $possible[(int) floor(rand(0, strlen($possible) - 1))];
         }
         return $text;
     }
